@@ -12,3 +12,8 @@ a{
 img{
     width: 400px;
 }
+.bigger {
+    font-size: 2em;
+}
+
+#main-topic{}
