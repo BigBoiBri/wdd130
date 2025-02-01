@@ -1,19 +1,57 @@
 body{
-    background-color: aqua;
+    background-color: azure;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+#content{
+    max-width: 1600px;
+    background-color: darkgray;
+}
+nav{
+    background-color: darkcyan;
+    padding: 20px;
+}
 
-a{
+
+nav a{
     padding: 15px;
     color: black;
     font-size: 20px;
+    text-decoration: none;
+    color: white;
+    margin: 15px;
+}
+nav a:hover{
+    background-color: darkslategray;
+    color: white;
+}
+h1{
+    text-align: center;
 }
 
 img{
     width: 400px;
+    display: block;
+    margin: 50px auto;
+    
 }
-.bigger {
-    font-size: 2em;
-}
+p{
+    padding: 0 30px;
+    line-height: 2em;
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
 
-#main-topic{}
+}
+#main-topic{
+    color: aquamarine;
+}
+footer{
+    margin-top: 30px;
+    height: 50px;
+    background-color: darkslategrey;
+    
+}
+footer a{
+    color:black;
+
+}
