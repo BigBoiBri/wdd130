@@ -55,6 +55,11 @@ div{
     width: 80px;
 }
 
+.calendar{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
 
 h1{
     text-align: center;
@@ -101,7 +106,6 @@ h1{
 }
 
 .button-box{
-    margin-top: -100px;
     text-align: center;
 }
 .button {
@@ -138,6 +142,13 @@ footer {
     margin-top: 25px;
     text-align: center;
     padding: 20px;
+}
+
+#calendarBox {
+    display: none;
+    background: #00B4D8;
+    padding: 10px;
+    top: 50px;
 }
 
 footer a{

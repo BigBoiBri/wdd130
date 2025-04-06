@@ -4,91 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BJ-Phone-Repair</title>
+    <link href="styles/schedule.css" rel="stylesheet">
 </head>
-<main>
-    <div id="content">
-        <header>
-            <a id="logo_link" href="index.html">
-                <img src="logo.png" alt="Phone Repair Logo" class="logo">
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="scheduling.html">Scheduling</a>
-            </nav>
-        </header>
-
-            <div class="button-box">
-                <form action="#" method="get">
-                <p>
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="user_name" required/>
-                </p>
-                <p>
-                  <label for="mail">Email:</label>
-                  <input type="email" id="mail" name="user_email" placeholder="youremail@example.com" />
-                </p>
-                <p class="button">
-                    <button id="openCalendar">Click here to Schedule an appointment!</button>
-                  </p>
-                  <div id="calendarBox">
-                    <input type="date" id="calendarInput">
-                    <button onclick="closeCalendar()">Submit</button>
-                </div>  
-              </form>
-
-            </div>
-            
-        </div>
-        
-        <style>
-            #calendarBox {
-                display: none;
-                position: absolute;
-                background: white;
-                border: 1px solid #ccc;
-                padding: 10px;
-                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-                top: 50px;
-            }
-        </style>
-        
-        <script>
-            document.getElementById("openCalendar").addEventListener("click", function(event) {
-                event.preventDefault(); // Prevents form submission if it's inside a form
-        
-                let name = document.getElementById("name").value.trim();
-                let email = document.getElementById("mail").value.trim();
-                
-                if (name === "" || email === "") {
-                    alert("Please enter your name and email before scheduling an appointment.");
-                } else {
-                    document.getElementById("calendarBox").style.display = "block";
-                }
-            });
-        
-            function closeCalendar() {
-                document.getElementById("calendarBox").style.display = "none";
-            }
-        </script>
-        
-</main>
-
-    <footer>
-        <a id="logo_link" href="index.html">
-            <img src="logo.png" alt="Phone Repair Logo" class="logo">
-        </a>
-        <div class="address">
-            <h2>Address:</h2>
-            <p>123 Main Street,Redlands</p>
-            <p>California, USA</p>
-        </div>
-        <a href="site-plan.html"> Site Plan </a>
-        <p>BJ-Phone-Repair &copy; 2025 - Brian Skousen</p>
-    </footer>
-
-</div>
 <body>
-    
+    <main>
+        <div id="content">
+                <header>
+                    <a id="logo_link" href="index.html">
+                        <img src="logo.png" alt="Phone Repair Logo" class="logo">
+                    </a>
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="scheduling.html">Scheduling</a>
+                    </nav>
+                </header>
+        
+                    <div class="button-box">
+                        <form action="#" method="get">
+                        <p>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" required>
+                        </p>
+                        <p>
+                        <label for="mail">Email:</label>
+                        <input type="email" id="mail" name="user_email" placeholder="youremail@example.com" >
+                        </p>
+                        <p class="button">
+                            <button id="openCalendar">Click here to Schedule an appointment!</button>
+                        </p>
+                        <div id="calendarBox">
+                            <input type="date" id="calendarInput">
+                            <button onclick="closeCalendar()">Submit</button>
+                        </div>  
+                        
+                    </form>
+        
+                    </div>
+                    
+                </div>      
+        
+                <script>
+                    document.getElementById("openCalendar").addEventListener("click", function(event) {
+                        event.preventDefault();
+                
+                        let name = document.getElementById("name").value.trim();
+                        let email = document.getElementById("mail").value.trim();
+                        
+                        if (name === "" || email === "") {
+                            alert("Please enter your name and email before scheduling an appointment.");
+                        } else {
+                            document.getElementById("calendarBox").style.display = "block";
+                        }
+                    });
+                
+                    function closeCalendar() {
+                        event.preventDefault(); 
+                        document.getElementById("calendarBox").style.display = "none";
+                        document.getElementById("thankYouMessage").style.display = "block";
+                    }
+                </script>
+                
+                <p id="thankYouMessage" style="display:none; color: white; font-size: 1.2em; text-align: center; margin-top: 20px;">
+                    Thanks for booking your appointment! We'll be in contact with you shortly!
+                </p>
+                
+                <img src="Calendar.png" alt="Calendar" class="calendar">
+            
+        
+        
+            <footer>
+                    <img src="logo.png" alt="Phone Repair Logo" class="logo">
+                <div class="address">
+                    <h2>Address:</h2>
+                    <p>123 Main Street,Redlands</p>
+                    <p>California, USA</p>
+                </div>
+                <a href="site-plan.html"> Site Plan </a>
+                <p>BJ-Phone-Repair &copy; 2025 - Brian Skousen</p>
+            </footer>
+
+    </main>  
+
 </body>
+
 </html>
